@@ -1,0 +1,68 @@
+.mainOptionsContainer {
+    position: relative;
+    width: 80%;
+    padding: 10px 0;
+    background-color: var(--text-dark-);
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+
+}
+
+.mainOptionsContainer button {
+    width: 95%;
+    margin-bottom: 15px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--text-light);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    box-shadow: 1px 1px 5px black;
+}
+
+.mainOptionsContainer button:hover{
+    background-color: var(--main-color);
+}
+
+.optionsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.optionsContainer select {
+    border:1px solid var(--main-color);
+    background-color: rgb(24, 24, 24);
+    color: var(--text-light);
+    border-radius: 5px;
+    padding:2px 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.optionsContainer > select > option {
+    font-weight: 700;
+}
+
+.disabled-option {
+    color: gray;
+    pointer-events: none;
+}
+
+.filtersContainer {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+}
+
+.filterTag {
+    background-color: rgba(255, 255, 255, 0.676);
+    color: black;
+    font-style: italic;
+    padding: 0 5px 3px 5px;
+    border-radius: 5px;
+    margin-right: .5rem;
+    text-transform: capitalize;
+}

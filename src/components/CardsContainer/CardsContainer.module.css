@@ -1,0 +1,78 @@
+.mainContainer {
+    margin-top: 100px;
+    min-height: 100vh;
+    width:100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    background-color: var(--text-dark-);
+    padding: 5px 35px 10px 35px;
+    border-radius: 35px;
+    width: 80%;
+    margin-top: 50px;
+    color: rgb(253, 253, 0);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border: 1px solid var(--main-color);
+    /* box-shadow: -1.5px 1.5px 5px rgb(180, 180, 180); */
+}
+
+.title2 {
+    background-color: var(--text-dark-);
+    padding: 5px 35px 10px 35px;
+    border-radius: 35px;
+    width: 80%;
+    color: rgb(253, 253, 0);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border:1px solid var(--main-color);
+    /* box-shadow: -1.5px 1.5px 5px rgb(62, 62, 62); */
+}
+
+.viewContainer {
+    min-height: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+  
+}
+
+.button {
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--text-light);
+    color: var(--text-dark-);
+    box-shadow: 1px 1px 5px black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    margin-top: .5rem;
+    margin-bottom: -10px;
+}
+
+.button:hover{
+    background-color: var(--main-color);
+    color: var(--text-dark-);
+    transform: scale(1.05);
+}
+
+.cardsContainer {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 25px;
+    margin-top: .9rem;
+}

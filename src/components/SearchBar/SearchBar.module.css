@@ -1,0 +1,93 @@
+.searchBarContainer {
+    position: relative;
+    font-family: 'open-sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    margin-bottom: .3rem;
+    color: var(--text-light);
+    position: relative;
+
+}
+.label label {
+    text-shadow: .5px .5px 1px rgba(69, 69, 69, 0.3);
+    font-weight: 600;
+}
+.emoji {
+    text-shadow: -1px -1px 8px rgb(0, 0, 0);
+    font-size: 1.5rem;
+    position: absolute;
+    right: -8px;
+    top: 10px;
+}
+
+.searchBar {
+    display: flex;   
+}
+
+.inputContainer {
+    position: relative;
+}
+.glass {
+    position: absolute;
+    left: 8px;
+    top:25%;
+}
+
+.glassImg{
+    width: 15px;
+}
+.input {
+    height: 2rem;
+    width: 18rem;
+    padding: 0 0 0 30px;
+    border: 1px solid var(--semi-light);
+    border-radius: 15px 0 0 15px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, .7);
+}
+
+
+.button {
+    border-radius: 0 15px 15px 0;
+    padding: 0 15px;
+    border: 1px solid var(--semi-light);
+    border-left: 1px solid var(--text-dark-);
+    background-color: var(--main-color);
+    color: var(--text-dark);
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100px;
+    transition: .5s ease-in-out;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, .7);
+}
+.button:hover{
+    box-shadow: 1px 1px 5px var(--main-color);
+    font-weight: 600;
+}
+.dropdown {
+    position: absolute;
+    width: 400px;
+    background-color: var(--text-dark-);
+    border: 2px solid var(--main-color);
+    top: 65px;
+}
+
+.dropdownMenu {
+    list-style: none;
+    text-align: left;
+}
+
+.dropdownItem {
+    margin: 5px;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.dropdownItem:hover {
+    background-color: rgb(24, 24, 24);
+}

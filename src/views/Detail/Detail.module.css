@@ -1,0 +1,29 @@
+.detailContainer {
+    margin-top: 50px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/fondo-comida-dark.jpg');
+    background-attachment: fixed;
+}
+
+.spinnerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.spinnerContainer p {
+    color: var(--text-light);
+    font-weight: 700;background-color: var(--text-dark-);
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}

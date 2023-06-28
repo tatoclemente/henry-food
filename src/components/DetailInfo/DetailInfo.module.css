@@ -1,0 +1,139 @@
+.detailContainer {
+  margin: 100px;
+  padding-bottom: 60px;
+  width: 80vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-dark-);
+  border-radius: 10px;
+  color: var(--text-light);
+  text-align: justify;
+  overflow: hidden;
+}
+
+.id {
+  background-color: rgb(24, 24, 24);
+  width: 100%;
+  text-align: left;
+  padding: 10px 25px;
+}
+
+.name {
+  margin: 10px 0;
+  border-bottom: 3px solid var(--main-color);
+  font-weight: 500;
+  text-align: center;
+  max-width: 80%;
+}
+
+.summary {
+  width: 80%;
+  margin: 20px 0;
+}
+
+.summary a {
+  color: var(--text-blue);
+}
+
+.stepsContainer {
+  background-color: rgb(24, 24, 24);
+  width: 80%;
+  border-radius: 10px;
+  padding: 20px 0 0px 0;
+  margin: 30px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+}
+
+.stepsTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--main-color);
+  font-size: 3rem;
+}
+
+.stepsList {
+  list-style: none;
+}
+
+.stepBg {
+  background-color: rgba(188, 188, 188, 0.2);
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.step {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+
+.imageContainer {
+  width: 80%;
+  height: auto;
+  display: flex;
+  border: 2px solid var(--main-color);
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.healthScore {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);  
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.score {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.image {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: -1px -1px 10px rgba(0, 0, 0, .5);
+}
+
+.dietsContainer {
+  width: 30%;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.dietsTitle {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.dietsList {
+  list-style: none;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.textNoDiets {
+  text-align: left;
+}
+.checkIcon {
+  margin-right: 0.5rem;
+  width: 17px;
+  height: auto;
+  transform: translateY(3px);
+}
