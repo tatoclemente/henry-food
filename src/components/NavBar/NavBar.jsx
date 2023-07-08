@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import style from "./NavBar.module.css";
 import SearchBar from "../SearchBar/SearchBar";
@@ -8,13 +8,27 @@ import ROUTE from "../../helpers/routes.helpers";
 
 function NavBar(props) {
   const location = useLocation()
+
+  const [menorAncho1055, setMenorAncho960] = useState(window.innerWidth < 1055);
+
+  useEffect(() => {
+    const actualizarAnchoVentana = () => {
+      setMenorAncho960(window.innerWidth < 1055);
+    };
+
+    window.addEventListener('resize', actualizarAnchoVentana);
+
+    return () => {
+      window.removeEventListener('resize', actualizarAnchoVentana);
+    };
+  }, []);
   return (
     <nav className={style.container}>
       <div className={style.logoContainer}>
         <img className={style.logo} src={Logo} alt="logo" />
         <h1>Henry Food</h1>
       </div>
-      <div>
+      <div className={style.searchBarPosition}>
         {location.pathname === '/home' && <SearchBar onSearch={props.onSearch} />}
       </div>
       <div className={style.menuContainer}>
@@ -31,7 +45,7 @@ function NavBar(props) {
             location.pathname === ROUTE.HOME
             ? <div className={style.itemCreate}>
                  <span className={style.emoji}>👉</span>
-                 <NavLink to="/create">create your own recipe here!</NavLink>
+                 <NavLink to="/create">{!menorAncho1055?'create your own recipe here!': 'New Recipe'}</NavLink>
                </div>
             : ""
           }

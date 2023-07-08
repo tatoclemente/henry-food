@@ -101,3 +101,173 @@
         transform: translateX(0);
     }
 }
+
+@media screen and (max-width: 1055px) {
+    .container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 125px;
+        border-bottom: 2px solid var(--main-color);
+        width: 100vw;
+        background-color: #2e2e2e;
+        box-shadow: 2px 0 5px var(--main-color);
+        z-index: 50;
+    }
+    .menu {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        margin-top: 0;
+    }
+    .item:nth-child(1) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .itemCreate {
+        position: absolute;
+        width: 120px;
+        background-color: var(--text-light);
+        padding: 5px 5px 7px;
+        border-radius: 18px;
+        right: 18%;
+        bottom: -2.8rem;
+        border: 1px solid var(--main-color);
+        box-shadow: inset 1px 1px 5px var(--text-dark-);
+    }
+
+    .itemCreate a {
+        color: var(--text-dark-);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .emoji {
+        text-shadow: -1px -1px 8px rgb(0, 0, 0);
+        font-size: 1.8rem;
+        position: absolute;
+        left: -25px;
+        bottom: 0;
+        animation: singpost .5s linear infinite alternate;
+        transition: .5s ease-out;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 140px;
+        border-bottom: 2px solid var(--main-color);
+        padding-top: 1rem;
+        width: 100vw;
+        background-color: #2e2e2e;
+        box-shadow: 2px 0 5px var(--main-color);
+        z-index: 50;
+    }
+
+    .logoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 11.5rem;
+        justify-content: space-between;
+        color: var(--main-color);
+        font-family: 'Dancing Script', sans-serif;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+    }
+
+    .logo {
+        width: auto;
+        height: 50px;
+        filter: drop-shadow(2px 2px 5px black);
+    }
+    .searchBarPosition{
+        position: absolute;
+        bottom: .7rem;
+        left: 1rem;
+    }
+
+    .menu {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        width: 100px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    
+    .itemCreate {
+        position: absolute;
+        width: 120px;
+        background-color: var(--text-light);
+        padding: 5px 5px 7px;
+        border-radius: 18px;
+        right: 90%;
+        bottom: 1.5rem;
+        border: 1px solid var(--main-color);
+        box-shadow: inset 1px 1px 5px var(--text-dark-);
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .logoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 9rem;
+        justify-content: space-between;
+        color: var(--main-color);
+        font-family: 'Dancing Script', sans-serif;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .logo {
+        width: auto;
+        height: 40px;
+        filter: drop-shadow(2px 2px 5px black);
+    }
+    .menu {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        width: 100px;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+
+
+    .itemCreate {
+        position: absolute;
+        width: 110px;
+        background-color: var(--text-light);
+        padding: 5px 5px 7px;
+        border-radius: 18px;
+        right: 82%;
+        bottom: 1.5rem;
+        border: 1px solid var(--main-color);
+        box-shadow: inset 1px 1px 5px var(--text-dark-);
+        font-size: .9rem;
+    }
+
+    .itemCreate a {
+        color: var(--text-dark-);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

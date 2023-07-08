@@ -9,6 +9,22 @@ import { clearReacipeFiltered, setCurrentDiets, setCurrentPage } from '../../red
 
 function SearchBar({ onSearch }) {
 
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const [menorAncho1055, setMenorAncho1055] = useState(window.innerWidth < 1055);
+
+  useEffect(() => {
+    const actualizarAnchoVentana = () => {
+      setMenorAncho1055(window.innerWidth < 1055);
+    };
+
+    window.addEventListener('resize', actualizarAnchoVentana);
+
+    return () => {
+      window.removeEventListener('resize', actualizarAnchoVentana);
+    };
+  }, []);
+
   const globalStateRecipes = useSelector((state) => state.allRecipes);
 
   const dispatch = useDispatch()
@@ -61,6 +77,7 @@ function SearchBar({ onSearch }) {
       onSearch(nameOption)
       dispatch(clearReacipeFiltered())
       dispatch(setCurrentDiets([]))
+      setIsExpanded(false);
     }
   }
 
@@ -68,8 +85,18 @@ function SearchBar({ onSearch }) {
     dispatch(setCurrentPage(0)) // Establezco currentPage en 0 para volver a la pagina 1
   };
 
+  const handleInputClick = () => {
+    setIsExpanded(true);
+  };
+  
+  const handleInputBlur = () => {
+    if (name === "") {
+      setIsExpanded(false);
+    }
+  };
   return (
-    <div className={style.searchBarContainer}>
+    <div className={`${style.searchBarContainer} ${isExpanded || !menorAncho1055 ? style.expanded : ''}`}>
+
       {/* <div className={style.label}>
         <label>COME ON!, SEARCH YOUR FAVORITE RECIPES</label>
       </div> */}
@@ -80,6 +107,8 @@ function SearchBar({ onSearch }) {
             id="search"
             value={name}
             onChange={handleChange}
+            onClick={handleInputClick}
+            onBlur={handleInputBlur}
             placeholder="Start looking for..."
             className={style.input}
             autoComplete="off"
