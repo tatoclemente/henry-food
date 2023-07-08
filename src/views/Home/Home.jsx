@@ -42,7 +42,7 @@ function Home({ isSearchPerformed, showSpinner }) {
         ? (
           <div className={style.spinnerContainer}>
             <p>Please Wait...</p>
-            <Spinner />; 
+            <Spinner /> 
           </div> 
         ) : recipeDataAll.length === 0 && !isSearchPerformed ?
         (
