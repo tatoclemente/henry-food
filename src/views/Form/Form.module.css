@@ -30,6 +30,7 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
 .formContainer h1 {
     border-bottom: 3px solid var(--main-color);
     position: absolute;
@@ -206,9 +207,8 @@
     padding: 10px 10px;
     border-radius: 5px;
     background-color: rgb(24, 24, 24);
-    min-width: 33rem;
-    max-width: 500px;
     word-wrap: break-word;
+    width: 33rem
 }
 .fileIcon {
     width: 20px;
@@ -359,4 +359,251 @@
     font-size: .9rem;
     opacity: .6;
     pointer-events: none;
+}
+
+@media screen and (max-width: 970px) {
+    .formContainer {
+        padding: 0 0 100px 0;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--text-dark-);
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 700px) {    
+    .formContainer h1 {
+        border-bottom: 3px solid var(--main-color);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    .formContainer h1 {
+        width: 95%;
+        font-size: 1.7rem;
+    }
+    .inputContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(24, 24, 24);
+        margin: 18px 0;
+        padding: 15px;
+        width: 95%;
+        border-radius: 5px;
+    }
+    .input{
+        height: 2rem;
+        width: 95%;
+        margin: 10px 0;
+        border-radius: 3px;
+        border: none;
+        padding: 0 10px;
+    }
+    
+    .score {
+        display: block;
+        background-color: var(--main-color);
+        border-radius: 5px;
+        padding: 3.5px 10px;
+        color: var(--text-dark-);
+        font-weight: bold;
+    }
+    
+    .inputScore {
+        height: 2rem;
+        width: 95%;
+        appearance: none;
+        background-color: var(--text-dark-);
+        border-radius: 5px;
+        outline: none;
+        text-align: left;
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+
+    
+    .textarea {
+        margin: 10px 0;
+        width: 95%;
+        max-height: 8rem;
+        min-height: 8rem;
+        border-radius: 3px;
+        padding: 10px;
+        font-family: 'roboto', sans-serif;
+        resize: vertical;
+    }
+    
+    /* PASO A PASO */
+    .stepsContainer {
+        width: 95%;
+    }
+    .inputSteps {
+        width: 95%;
+    }
+   .inputStep{
+        width: 100%;
+    }
+    
+    .stepsContainer button {
+        width: 95%;
+    }
+    .stepsContainer button:hover {
+        background-color: var(--button-hover);
+        color: var(--text-light);
+    
+    }
+    .stepsList {
+        width: 95%;
+        list-style: none;
+    }
+
+    .stepsListItemTextContainer {
+        width: 95%;
+        word-wrap: break-word;
+        overflow: hidden;
+        text-align: left;
+    }
+    
+    
+    
+    /* IMAGENES */
+    .uploaderContainer{
+        width: 95%;
+    }
+    
+    .fileNameContainer {
+        width: 95%;
+    }
+    .fileIcon {
+        width: 20px;
+        margin-left: 10px;
+    }
+    
+    
+    /* DIETAS */
+    .dietsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;  
+        margin-left: 1rem;  
+    }
+
+    .dietsCheckboxContainer {
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        font-size: .6rem;
+        margin: 0;
+    }
+    
+    .submitButton {
+        width: 95%;
+    }
+    
+    
+    /* ERROR MESSAGE */
+    
+    .errorMessage {
+        position: absolute;
+        background-color: #ffdddd;
+        color: #ff0000;
+        padding: 10px;
+        border: 1px solid #ff0000;
+        border-radius: 4px;
+        bottom: -30px;
+    }
+    
+    .errorMessageSteps {
+        position: absolute;
+        background-color: #ffdddd;
+        color: #ff0000;
+        padding: 10px;
+        border: 1px solid #ff0000;
+        border-radius: 4px;
+        bottom: -38px;
+    }
+    
+    .errorMessageImage {
+        position: absolute;
+        background-color: #ffdddd;
+        color: #ff0000;
+        padding: 10px;
+        border: 1px solid #ff0000;
+        border-radius: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -38px;
+        z-index: 2;
+    }
+    .errorMessage .arrowUp {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #ffdddd;
+    }
+    .errorMessageSteps .arrowUp {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #ffdddd;
+    }
+    
+    .errorMessageImage .arrowUp {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #ffdddd;
+    }
+    
+    .spinnerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+        background-image: url('../../images/fondo-comida-dark.jpg');
+    }
+    
+    .spinnerContainer p {
+        color: var(--text-light);
+        font-weight: 700;background-color: var(--text-dark-);
+        padding: 5px 15px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .docCharacters {
+        position: absolute;
+        bottom: 5px;
+        right: 65px;
+        font-size: .9rem;
+        opacity: .6;
+        pointer-events: none;
+    }
 }
