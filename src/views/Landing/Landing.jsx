@@ -6,7 +6,7 @@ import FriedEgg from '../../images/huevo-frito.png'
 function Landing() {
   return (
     <div className={style.landingContainer}>
-      <div className={style.landingTitle}>Welcome To Henry Food App</div>
+      <div className={style.landingTitle}>Welcome To <b>Henrys Food App</b></div>
       <Link className={style.landingLink} to="/home">
         <button className={style.landingButton}>Go To Home</button>
       </Link>
