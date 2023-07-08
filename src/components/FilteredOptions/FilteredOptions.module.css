@@ -66,3 +66,23 @@
     margin-right: .5rem;
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 960px) {
+    
+    .mainOptionsContainer button {
+        width: 90%;
+    }
+    
+    .optionsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        gap: .3rem;
+    }
+    .optionsContainer select {
+        margin-bottom: .3rem;
+        width: 80%;
+    }
+}
