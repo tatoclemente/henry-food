@@ -11,11 +11,11 @@ function SearchBar({ onSearch }) {
 
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const [menorAncho1055, setMenorAncho1055] = useState(window.innerWidth < 1055);
+  const [menorAncho980, setMenorAncho980] = useState(window.innerWidth < 980);
 
   useEffect(() => {
     const actualizarAnchoVentana = () => {
-      setMenorAncho1055(window.innerWidth < 1055);
+      setMenorAncho980(window.innerWidth < 980);
     };
 
     window.addEventListener('resize', actualizarAnchoVentana);
@@ -95,7 +95,7 @@ function SearchBar({ onSearch }) {
     }
   };
   return (
-    <div className={`${style.searchBarContainer} ${isExpanded || !menorAncho1055 ? style.expanded : ''}`}>
+    <div className={`${style.searchBarContainer} ${isExpanded || !menorAncho980 ? style.expanded : ''}`}>
 
       {/* <div className={style.label}>
         <label>COME ON!, SEARCH YOUR FAVORITE RECIPES</label>

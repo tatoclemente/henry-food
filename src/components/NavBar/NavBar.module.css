@@ -108,7 +108,7 @@
         top: 0;
         left: 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         height: 125px;
         border-bottom: 2px solid var(--main-color);
@@ -117,12 +117,18 @@
         box-shadow: 2px 0 5px var(--main-color);
         z-index: 50;
     }
+
+    .logoContainer {
+    
+        margin-left: 1.5rem;
+    }
     .menu {
         position: relative;
         flex-direction: column;
         justify-content: center;
         width: 200px;
         margin-top: 0;
+
     }
     .item:nth-child(1) {
         margin-left: 0;
