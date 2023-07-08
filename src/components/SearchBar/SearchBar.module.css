@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 90vw;
 }
 
 .searchBarContainer.expanded .searchBar {
@@ -84,9 +85,11 @@
 .dropdown {
     position: absolute;
     width: 400px;
+    max-width: 90vw;
     background-color: var(--text-dark-);
     border: 2px solid var(--main-color);
     top: 65px;
+    left: 0;
 }
 
 .dropdownMenu {

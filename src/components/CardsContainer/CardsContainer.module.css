@@ -89,7 +89,19 @@
     }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 900px) {
+    .mainContainer {
+        margin-top: 0;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+    
+    .title2 {
+        font-size: 1rem;
+    }
+
     .cardsContainer {
         width: 90%;
         height: auto;
