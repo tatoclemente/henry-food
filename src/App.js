@@ -10,6 +10,9 @@ import axios from 'axios';
 import NotFound from './components/404NotFound/NotFound';
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
+import { Helmet } from 'react-helmet';
+
+
 
 function App() {
   const dispatch = useDispatch()
@@ -47,7 +50,7 @@ function App() {
     setShowSpinner(true)
 
     try {
-      const {data} = await axios.post('http://localhost:3001/recipes', formData)
+      const {data} = await axios.post('/recipes', formData)
       if (data.name)
       window.alert("Felicitaciones, has creado una receta con exito")
       dispatch(addNewRecipe(data))
@@ -64,6 +67,10 @@ function App() {
 
   return (
     <div className="App">
+
+      <Helmet>
+        <meta property="og:image" content="https://res.cloudinary.com/dt2o36ezn/image/upload/v1688853869/tato/Captura_de_pantalla_2023-07-07_105858_mjp0t5.png" />
+      </Helmet>
 
         {location.pathname !== '/'&& <NavBar 
           onSearch={onSearch}
