@@ -22,7 +22,7 @@ function App() {
   const history = useHistory()
   const onSearch = (name) => {
     if (!name) {
-      window.alert("Ups, lo siento, debe ingresar un nombre de receta")
+      window.alert("Oops, sorry, you need to enter a recipe name")
       return
     } 
     
@@ -52,11 +52,11 @@ function App() {
     try {
       const {data} = await axios.post('/recipes', formData)
       if (data.name)
-      window.alert("Felicitaciones, has creado una receta con exito")
+      window.alert("Congratulations, you have successfully created a recipe.")
       dispatch(addNewRecipe(data))
       // history.push(ROUTE.HOME)
     } catch (error) {
-      window.alert("Error al enviar el formulario")
+      window.alert("Error submitting the form")
       console.log(error.message);
     } finally {
       setShowSpinner(false)

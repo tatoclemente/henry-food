@@ -47,7 +47,7 @@ function Detail() {
       {loading
       ? <div className={style.spinnerContainer}>
           <p>Please Wait...</p>
-          <Spinner />; 
+          <Spinner /> 
         </div> 
       : <DetailInfo recipe={recipe}/>
       }
