@@ -10,7 +10,7 @@ import store from './redux/store';
 
 
 // axios.defaults.baseURL = 'http://localhost:3001';
-axios.defaults.baseURL = 'https://apifood-kygc.onrender.com'
+axios.defaults.baseURL = 'api-food-production-1e5f.up.railway.app'
 
 ReactDOM.render(
   <Provider store={store}>
